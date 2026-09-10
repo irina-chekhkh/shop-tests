@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Cart tests">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="category" value="XiaomiGlassesVirtualReality"/>
+
+    <test name="Add element to the cart">
+        <classes>
+            <class name="com.CartTests">
+                <methods>
+                    <include name="addProductToCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Drop element from the cart">
+        <classes>
+            <class name="com.CartTests">
+                <methods>
+                    <include name="removeProductFromCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>
