@@ -1,4 +1,4 @@
-package com.step_definitions;
+package com.parameters;
 
 import com.structure.Categories;
 import io.cucumber.java.ParameterType;

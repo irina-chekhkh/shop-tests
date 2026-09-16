@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(features = "src/test/java/com/features/",
-        glue = "com/step_definitions",
+        glue = {"com/step_definitions","com/parameters"},
         plugin = {"pretty"},
         tags = "@Cart or @Sorting")
 public class TestRunner extends AbstractTestNGCucumberTests {

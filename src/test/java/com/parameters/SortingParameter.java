@@ -1,4 +1,4 @@
-package com.step_definitions;
+package com.parameters;
 
 import com.structure.SortingType;
 import io.cucumber.java.ParameterType;
