@@ -4,7 +4,10 @@ public enum Categories {
     Xiaomi(null, "xiaomi-store"),
     ElectroCars(null, "elektromobili"),
     XiaomiSmartWatch(Xiaomi, "smart-chasy"),
-    XiaomiGlassesVirtualReality(Xiaomi, "ochki-virtual-noj-real-nosti");
+    XiaomiGlassesVirtualReality(Xiaomi, "ochki-virtual-noj-real-nosti"),
+    TourismAndFishing(null, "turizm-i-rybalka"),
+    Tent(TourismAndFishing,"palatki");
+
 
     private final Categories parent;
     private final String path;

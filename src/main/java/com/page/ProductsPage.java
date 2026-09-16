@@ -3,6 +3,7 @@ package com.page;
 import com.driver.element.SmartElement;
 import com.structure.ProductDTO;
 import com.structure.SortingType;
+import com.utils.BrowserActions;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -59,11 +60,18 @@ public class ProductsPage extends BasePage {
     }
 
     @Step("Add product to the cart")
-    public AddToCartModal addProductToCart(String productName) {
+    public AddToCartModal addProductToCart(ProductDTO product) {
         logger.info("Adding product to cart");
-        new SmartElement(By.xpath(
-                String.format("//div[@class='product-card' and .//a[@title='%s']]//button[contains(@class,'cart')]", productName.strip())
-        ), wait).click();
+        System.out.println(product.price());
+        String price = product.price().toString().replaceAll("(?<=\\d)(?=(\\d{3})+(?!\\d))", " ");
+        price = price.length() <= 3 ? price : price.substring(0, price.indexOf(" "));
+
+        String query = String.format("//div[@class='product-card' and .//span[contains(text(),'%s')] and .//a[@title='%s']]//button[contains(@class,'cart')]",
+                price, product.name().strip());
+
+        BrowserActions.scroll(driver, wait, By.xpath(query));
+
+        new SmartElement(By.xpath(query), wait).click();
         return new AddToCartModal();
     }
 }
