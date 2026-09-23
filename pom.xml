@@ -13,8 +13,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <aspectj.version>1.9.24</aspectj.version>
-        <suitePath>src/test/resources/products-sorting-tests.xml</suitePath>
-        <!--    <suitePath>src/test/resources/products-cart-tests.xml</suitePath>-->
+        <suitePath>src/test/resources/testng.xml</suitePath>
     </properties>
 
     <dependencies>
@@ -29,6 +28,13 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>2.33.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>2.33.0</version>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
@@ -48,10 +54,9 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.33.0</version>
+            <version>7.34.6</version>
             <scope>compile</scope>
         </dependency>
-
 
         <dependency>
             <groupId>io.cucumber</groupId>

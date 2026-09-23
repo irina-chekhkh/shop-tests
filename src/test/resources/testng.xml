@@ -1,0 +1,7 @@
+<suite name="Default Suite">
+    <test thread-count="5" name="Allo">
+        <classes>
+            <class name="com.test_runner.TestRunner"/>
+        </classes>
+    </test>
+</suite>

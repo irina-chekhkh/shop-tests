@@ -1,9 +1,9 @@
 package com.page;
 
 
-import com.utils.BrowserActions;
 import com.driver.element.SmartElement;
 import com.structure.Categories;
+import com.utils.BrowserActions;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
